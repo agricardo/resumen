@@ -1,31 +1,25 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Form</title>
-    <style>
-        body {
-            padding: 0;
-            margin: 0;
-        }
-    </style>
+    <title>Send an Email</title>
 </head>
-
 <body>
-
-    <form action="http://localhost:1234/resume-emailer" method="post"></form>
-
-
-    <h1>Ricardo Aranda</h1>
-
-    <imput type="hidden" value="index.html">
-        <input type="text" name="form">
-        <input type="text">
-
-
+    <h1>Email Form</h1>
+    <form action="http://localhost:3934/resume-emailer" method="POST">
+        <div>
+            To: <input type="text" name="dest_email">
+        </div>
+        <div>
+            Subject: <input type="text" name="subject">
+        </div>
+        <div>
+            Message:: <textarea name="message" rows="10" cols="30"></textarea>
+        </div>
+        <input type="submit" value="send">
+    </form>
 </body>
-
 </html>

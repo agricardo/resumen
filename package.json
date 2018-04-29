@@ -4,12 +4,16 @@
   "description": "resume emailer",
   "main": "index.js",
   "scripts": {
-    "test": "test"
-  
+    "test": "test",
+    "star": "nodemon server.js"
   },
   "author": "Ricardo Aranda",
   "license": "ISC",
   "dependencies": {
-    "expres": "0.0.5"
+    "express": "^4.16.3",
+    "fs": "0.0.1-security",
+    "nodemailer": "^4.6.4",
+    "nodemailer-smtp-transport": "^2.7.4",
+    "save": "^2.3.2"
   }
 }

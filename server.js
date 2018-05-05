@@ -1,4 +1,4 @@
-var port = process.env.PORT || 3934;
+var port = process.env.PORT || 8088;
 
 var express = require('express');
 var fs = require('fs');
@@ -26,7 +26,7 @@ var mailOptions = {
 }
 
 app.use(function (req, res, next) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Origin', 'fvi-grad.com');
   res.setHeader('Access-Control-Allow-Methods', 'Post');
   res.setHeader('Access-Control-Allow-Methods', 'X-Requested-With, content-type');
   res.setHeader('Access-Control-Allow-Credentials', true);
@@ -70,7 +70,7 @@ app.get('/', function (req, res){
     </head>
     <body>
         <h1>Email Form</h1>
-        <form action="http://localhost:3934/" method="POST">
+        <form action="http://fvi-grad.com:8088/" method="POST">
             <div>
                 To: <input type="text" name="dest_email">
             </div>
